@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const tasksList = document.getElementById("tasks");
 
  // this function handle the form submission and also  adding tasks
+ 
  taskForm.addEventListener("submit", function(event) {
   event.preventDefault(); // This Prevents the default behaviour of the browser 
 
@@ -66,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
       taskItem.innerHTML = ''; // Clear the current content of the list item
 
       // Creation of a new button  (to be able to save edited task)
+      
       const saveButton = document.createElement("button");
       saveButton.textContent = "Save";
 
@@ -74,6 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
       taskItem.append(saveButton);
 
       // Add event listener to save the edited task
+      
       saveButton.addEventListener("click", () => {
         const updatedTaskDescription = editInput.value;
 
@@ -89,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
           alert("Task description cannot be empty!");
         }
       });
+
     });
   });
 });
